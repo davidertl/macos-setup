@@ -4,7 +4,8 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install mas
-mas signin
+read -p "Enter your Apple-ID: "  appleid
+mas signin $appleid
 
 # Install the contents of "./Brewfile"
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile"
