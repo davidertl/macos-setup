@@ -16,7 +16,7 @@ mkdir ~/Documents/Repositories
 # Download Colorthemes and Settings
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/dracula.zsh-theme" -o ~/.oh-my-zsh/themes/dracula.zsh-theme
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/.zshrc" -o ~/.zshrc
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/vscode-settings.json" -o ~/Library/Application Support/Code/User/settings.json
+curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/vscode-settings.json" -o ~/Library/Application\ Support/Code/User/settings.json
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/.gitignore-global" -o ~/.gitignore-global
 
 # Git Setup
