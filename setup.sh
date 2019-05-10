@@ -4,9 +4,9 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install the contents of "./Brewfile"
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/Brewfile
-echo cat ~/Brewfile
-brew bundle --file=~/Brewfile
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/.Brewfile
+echo cat ~/.Brewfile
+brew bundle --global
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -14,10 +14,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 mkdir ~/Documents/Repositories
 
 # Download Colorthemes and Settings
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/dracula.zsh-theme" -o ~/.oh-my-zsh/themes/dracula.zsh-theme
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/.zshrc" -o ~/.zshrc
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/vscode-settings.json" -o ~/Library/Application\ Support/Code/User/settings.json
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/.gitignore-global" -o ~/.gitignore-global
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/dracula.zsh-theme" -o ~/.oh-my-zsh/themes/dracula.zsh-theme
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/.zshrc" -o ~/.zshrc
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/vscode-settings.json" -o ~/Library/Application\ Support/Code/User/settings.json
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/.gitignore-global" -o ~/.gitignore-global
 
 # Git Setup
 git config --global core.excludesfile '~/.gitignore-global'
@@ -75,6 +75,8 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 # Completely Disable Dashboard
 defaults write com.apple.dashboard mcx-disabled -bool true
+# Setup Lockscreen Message
+defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Jakob Sautner | +4917655528504 | jakob@sautner.cc"
 # Kill affected apps
 for app in "Dock" "Finder"; do
   killall "${app}" > /dev/null 2>&1
