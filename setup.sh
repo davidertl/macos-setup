@@ -3,6 +3,15 @@
 # Download and install Homebrew. You will be asked for your password.
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew install mas
+mas signin
+
 # Install the contents of "./Brewfile"
-wget https://gist.githubusercontent.com/lappalal/ed86dcf85718394b1366b4791e947076/raw/648512aadee5b2b4a88de2b50b2ae662d963be38/Brewfile
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/Brewfile" -o ./Brewfile
 brew bundle
+
+# Install Oh-My-ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Remove temp files
+rm -f ./Brewfile
