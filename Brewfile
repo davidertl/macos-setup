@@ -9,7 +9,6 @@ brew "htop"
 brew "httpd", restart_service: true
 brew "libiconv"
 brew "mariadb", restart_service: true
-brew "mas"
 brew "node"
 brew "php", restart_service: true
 brew "python@2"
