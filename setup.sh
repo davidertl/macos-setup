@@ -4,8 +4,8 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install the contents of "./Brewfile"
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/Brewfile
-brew bundle --file ~/Brewfile
+curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/.Brewfile
+brew bundle --global --verboose
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -88,4 +88,4 @@ echo "Done. Note that some of these changes require a logout/restart to take eff
 echo "Remember to add your new RSA Key to https://github.com/settings/keys"
 
 # Remove temp files
-rm -f ~/Brewfile
+rm -f ~/.Brewfile
