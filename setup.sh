@@ -7,7 +7,7 @@ brew install mas
 mas signin
 
 # Install the contents of "./Brewfile"
-curl "https://raw.githubusercontent.com/lappalal/macos-setup/Brewfile" -o ./Brewfile
+curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ./Brewfile
 brew bundle
 
 # Install Oh-My-ZSH
