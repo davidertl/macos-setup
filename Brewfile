@@ -29,7 +29,6 @@ cask "spotify"
 cask "telegram"
 cask "the-unarchiver"
 cask "toggl"
-cask "virtualbox"
 cask "visual-studio-code"
 cask "whatsapp"
 mas "com.apple.logic10", id: 634148309
