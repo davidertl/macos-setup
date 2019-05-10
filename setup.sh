@@ -5,7 +5,7 @@
 
 # Install the contents of "./Brewfile"
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/Brewfile
-brew bundle ~/Brewfile
+brew bundle --file ~/Brewfile
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
