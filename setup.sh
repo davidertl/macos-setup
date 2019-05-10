@@ -12,10 +12,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 mkdir ~/Documents/Repositories
 
-# Generating System specific new RSA key and copy it into clipboard. Paste into Github settings.
-ssh-keygen -t rsa -C "jakob@sautner.cc"
-pbcopy < ~/.ssh/id_rsa.pub
-
 # Download Colorthemes and Settings
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/dracula.zsh-theme" -o ~/.oh-my-zsh/themes/dracula.zsh-theme
 curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/.zshrc" -o ~/.zshrc
@@ -83,8 +79,13 @@ for app in "Dock" "Finder"; do
   killall "${app}" > /dev/null 2>&1
 done
 
+# Generating System specific new RSA key and copy it into clipboard. Paste into Github settings.
+ssh-keygen -t rsa -C "jakob@sautner.cc"
+pbcopy < ~/.ssh/id_rsa.pub
+
 # Done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+echo "Remember to add your new RSA Key to https://github.com/settings/keys"
 
 # Remove temp files
 rm -f ~/Brewfile
