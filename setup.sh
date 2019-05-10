@@ -4,8 +4,9 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install the contents of "./Brewfile"
-curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/.Brewfile
-brew bundle --file=~/Brewfile --verboose
+curl -O "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/Brewfile
+echo cat ~/Brewfile
+brew bundle --file=~/Brewfile
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
