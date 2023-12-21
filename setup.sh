@@ -3,8 +3,12 @@
 # Download and install Homebrew. You will be asked for your password.
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+brew tap homebrew/cask-versions
+brew tap homebrew/cask-drivers
+brew tap homebrew/cask-fonts
+
 # Install the contents of "./Brewfile"
-curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/Brewfile" -o ~/.Brewfile
+curl "https://raw.githubusercontent.com/davidertl/macos-setup/master/Brewfile" -o ~/.Brewfile
 echo cat ~/.Brewfile
 brew bundle --global
 
@@ -14,15 +18,15 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 mkdir ~/Documents/Repositories
 
 # Download Colorthemes and Settings
-curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/dracula.zsh-theme" -o ~/.oh-my-zsh/themes/dracula.zsh-theme
-curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/.zshrc" -o ~/.zshrc
-curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/vscode-settings.json" -o ~/Library/Application\ Support/Code/User/settings.json
-curl "https://raw.githubusercontent.com/lappalal/macos-setup/master/.gitignore-global" -o ~/.gitignore-global
+curl "https://raw.githubusercontent.com/davidertl/macos-setup/master/dracula.zsh-theme" -o ~/.oh-my-zsh/themes/dracula.zsh-theme
+curl "https://raw.githubusercontent.com/davidertl/macos-setup/master/.zshrc" -o ~/.zshrc
+curl "https://raw.githubusercontent.com/davidertl/macos-setup/master/vscode-settings.json" -o ~/Library/Application\ Support/Code/User/settings.json
+curl "https://raw.githubusercontent.com/davidertl/macos-setup/master/.gitignore-global" -o ~/.gitignore-global
 
 # Git Setup
 git config --global core.excludesfile '~/.gitignore-global'
-git config --global user.name "Jakob Sautner"
-git config --global user.email jakob@sautner.cc
+git config --global user.name "David Ertl"
+git config --global user.email github@david-ertl.de
 git config --global core.editor code
 
 # Apple Settings
